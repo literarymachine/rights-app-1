@@ -4,10 +4,6 @@ sudo: false
 cache:
   directories:
   - $HOME/.ivy2/cache
-branches:
-  only:
-    - master
-    - develop
 before_deploy: "sbt ++$TRAVIS_SCALA_VERSION clean dist"
 deploy:
   provider: releases
